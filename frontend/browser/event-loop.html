@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事件循环系统 | 陈东的技术博客</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.abfd12c2.css" as="style"><link rel="preload" href="/assets/js/app.6adb2d0f.js" as="script"><link rel="preload" href="/assets/js/2.1feacdd0.js" as="script"><link rel="preload" href="/assets/js/25.9eda682c.js" as="script"><link rel="prefetch" href="/assets/js/10.86858fbb.js"><link rel="prefetch" href="/assets/js/11.8722b348.js"><link rel="prefetch" href="/assets/js/12.1fc9780c.js"><link rel="prefetch" href="/assets/js/13.53dc4dee.js"><link rel="prefetch" href="/assets/js/14.e1164352.js"><link rel="prefetch" href="/assets/js/15.674db23a.js"><link rel="prefetch" href="/assets/js/16.3404d2a4.js"><link rel="prefetch" href="/assets/js/17.a251066e.js"><link rel="prefetch" href="/assets/js/18.9f9bb31a.js"><link rel="prefetch" href="/assets/js/19.10c4b0d5.js"><link rel="prefetch" href="/assets/js/20.57f3120a.js"><link rel="prefetch" href="/assets/js/21.cb890f1c.js"><link rel="prefetch" href="/assets/js/22.2cb90708.js"><link rel="prefetch" href="/assets/js/23.720e5020.js"><link rel="prefetch" href="/assets/js/24.7a8ca191.js"><link rel="prefetch" href="/assets/js/26.b848e97a.js"><link rel="prefetch" href="/assets/js/27.fa9ccfcf.js"><link rel="prefetch" href="/assets/js/28.a63c9ce4.js"><link rel="prefetch" href="/assets/js/29.e021d9cc.js"><link rel="prefetch" href="/assets/js/3.5a8b5ea7.js"><link rel="prefetch" href="/assets/js/30.dead7f02.js"><link rel="prefetch" href="/assets/js/31.4be0f1ca.js"><link rel="prefetch" href="/assets/js/32.89b044fb.js"><link rel="prefetch" href="/assets/js/33.cea647c8.js"><link rel="prefetch" href="/assets/js/34.8f793201.js"><link rel="prefetch" href="/assets/js/35.68f2ee30.js"><link rel="prefetch" href="/assets/js/36.1376147f.js"><link rel="prefetch" href="/assets/js/37.c9af2d9c.js"><link rel="prefetch" href="/assets/js/38.e9a172b5.js"><link rel="prefetch" href="/assets/js/39.e91f022b.js"><link rel="prefetch" href="/assets/js/4.005d0d5e.js"><link rel="prefetch" href="/assets/js/40.6a018672.js"><link rel="prefetch" href="/assets/js/41.68668b26.js"><link rel="prefetch" href="/assets/js/42.3b00df62.js"><link rel="prefetch" href="/assets/js/43.e7c72799.js"><link rel="prefetch" href="/assets/js/44.d1a626c5.js"><link rel="prefetch" href="/assets/js/45.7c4bd4df.js"><link rel="prefetch" href="/assets/js/46.85353abf.js"><link rel="prefetch" href="/assets/js/47.81de0475.js"><link rel="prefetch" href="/assets/js/48.c84db78b.js"><link rel="prefetch" href="/assets/js/49.1ace7807.js"><link rel="prefetch" href="/assets/js/5.51274f06.js"><link rel="prefetch" href="/assets/js/50.8d3fb383.js"><link rel="prefetch" href="/assets/js/51.e40fc875.js"><link rel="prefetch" href="/assets/js/52.143b7a1c.js"><link rel="prefetch" href="/assets/js/53.3c71bf48.js"><link rel="prefetch" href="/assets/js/54.bb74abd4.js"><link rel="prefetch" href="/assets/js/55.1e7c2dfa.js"><link rel="prefetch" href="/assets/js/56.fc38c782.js"><link rel="prefetch" href="/assets/js/57.4ef09778.js"><link rel="prefetch" href="/assets/js/58.a5e74f3d.js"><link rel="prefetch" href="/assets/js/59.9fac0e1d.js"><link rel="prefetch" href="/assets/js/6.c8f863ee.js"><link rel="prefetch" href="/assets/js/60.f41d5fdf.js"><link rel="prefetch" href="/assets/js/61.b3242094.js"><link rel="prefetch" href="/assets/js/62.a8b0e6c7.js"><link rel="prefetch" href="/assets/js/63.8e6c7951.js"><link rel="prefetch" href="/assets/js/64.5788eb2a.js"><link rel="prefetch" href="/assets/js/65.b0ca47f8.js"><link rel="prefetch" href="/assets/js/66.b3a4eef7.js"><link rel="prefetch" href="/assets/js/67.c06f17d5.js"><link rel="prefetch" href="/assets/js/68.8a12b5ed.js"><link rel="prefetch" href="/assets/js/69.c1944dab.js"><link rel="prefetch" href="/assets/js/7.2743162c.js"><link rel="prefetch" href="/assets/js/70.f852fc0f.js"><link rel="prefetch" href="/assets/js/71.f5bf15cd.js"><link rel="prefetch" href="/assets/js/72.ffb050fe.js"><link rel="prefetch" href="/assets/js/73.6844ef19.js"><link rel="prefetch" href="/assets/js/74.f6df44e9.js"><link rel="prefetch" href="/assets/js/8.3c6a9428.js"><link rel="prefetch" href="/assets/js/9.c26fec8a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.abfd12c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">陈东的技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="力扣刷题" class="dropdown-title"><span class="title">力扣刷题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/code-template.html" class="nav-link">
+  代码模板 (背)
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/lang-diff.html" class="nav-link">
+  语言差异 (坑)
+</a></li><li class="dropdown-item"><h4>
+          专题讲解
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/leetcode/topic/search.html" class="nav-link">
+  搜索
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/dp.html" class="nav-link">
+  DP
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/bin-search.html" class="nav-link">
+  二分查找
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/data-structure.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/topk.html" class="nav-link">
+  TopK
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/others.html" class="nav-link">
+  其它
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基本功
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/frontend/browser/" class="nav-link router-link-active">
+  浏览器和网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  原理和思想
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-subitem"><a href="/frontend/history.html" class="nav-link">
+  发展史
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-item"><!----> <a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="力扣刷题" class="dropdown-title"><span class="title">力扣刷题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/code-template.html" class="nav-link">
+  代码模板 (背)
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/lang-diff.html" class="nav-link">
+  语言差异 (坑)
+</a></li><li class="dropdown-item"><h4>
+          专题讲解
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/leetcode/topic/search.html" class="nav-link">
+  搜索
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/dp.html" class="nav-link">
+  DP
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/bin-search.html" class="nav-link">
+  二分查找
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/data-structure.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/topk.html" class="nav-link">
+  TopK
+</a></li><li class="dropdown-subitem"><a href="/leetcode/topic/others.html" class="nav-link">
+  其它
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基本功
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/frontend/browser/" class="nav-link router-link-active">
+  浏览器和网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  原理和思想
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-subitem"><a href="/frontend/history.html" class="nav-link">
+  发展史
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-item"><!----> <a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/frontend/browser/" aria-current="page" class="sidebar-link">概述</a></li><li><a href="/frontend/browser/js-engine.html" class="sidebar-link">JS 引擎</a></li><li><a href="/frontend/browser/http.html" class="sidebar-link">HTTP 协议</a></li><li><a href="/frontend/browser/event-loop.html" aria-current="page" class="active sidebar-link">事件循环系统</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/browser/event-loop.html#事件循环-消息队列" class="sidebar-link">事件循环 &amp; 消息队列</a></li><li class="sidebar-sub-header"><a href="/frontend/browser/event-loop.html#settimeout" class="sidebar-link">setTimeout</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/browser/event-loop.html#settimeout-为何不准时？" class="sidebar-link">setTimeout 为何不准时？</a></li><li class="sidebar-sub-header"><a href="/frontend/browser/event-loop.html#settimeout-嵌套调用" class="sidebar-link">setTimeout 嵌套调用</a></li></ul></li><li class="sidebar-sub-header"><a href="/frontend/browser/event-loop.html#xmlhttprequest" class="sidebar-link">XMLHttpRequest</a></li><li class="sidebar-sub-header"><a href="/frontend/browser/event-loop.html#宏任务-微任务" class="sidebar-link">宏任务 &amp; 微任务</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="事件循环系统"><a href="#事件循环系统" class="header-anchor">#</a> 事件循环系统</h1> <h2 id="事件循环-消息队列"><a href="#事件循环-消息队列" class="header-anchor">#</a> 事件循环 &amp; 消息队列</h2> <p>想要理解事件循环系统是必须要看源码的，它本质上就是死循环加上消息队列。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 执行消息队列中的任务</span>
+    Task task <span class="token operator">=</span> task_queue<span class="token punctuation">.</span><span class="token function">takeTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">ProcessTask</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="settimeout"><a href="#settimeout" class="header-anchor">#</a> setTimeout</h2> <p>在 JS 中的 <code>setTimeout()</code> 函数是如何实现的呢？</p> <p>需要延迟的任务会放到单独的延迟队列。</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 执行消息队列中的任务</span>
+    Task task <span class="token operator">=</span> task_queue<span class="token punctuation">.</span><span class="token function">takeTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">ProcessTask</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 执行延迟队列中的任务</span>
+    <span class="token function">ProcessDelayTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>通过上面的代码可以看到，延迟队列的优先级是最高的，别的任务都要排队，而延迟队列是插队的。<code>ProcessDelayTask()</code>会将延迟队列中所有已经到期的任务拿出来执行。</p> <h3 id="settimeout-为何不准时？"><a href="#settimeout-为何不准时？" class="header-anchor">#</a> setTimeout 为何不准时？</h3> <p>先介绍一个专业基础知识。多线程模型中，一个任务执行到一半是可以被高优先级任务打断的。首先会保存当前的上下文信息，然后切换到高优先级任务执行。执行完毕后，恢复上下文信息，并继续执行低优先级任务。</p> <p>但是事件循环系统不一样，它是单线程的，任务在执行的过程中是无法被打断的。因此如果当前任务执行时间太久，会导致定时器任务晚于预期时间才能得到执行。</p> <h3 id="settimeout-嵌套调用"><a href="#settimeout-嵌套调用" class="header-anchor">#</a> setTimeout 嵌套调用</h3> <p>如果 setTimeout 存在嵌套调用，那么系统会设置最短时间间隔为 4 毫秒。</p> <p>可以拿这段代码做实验，当嵌套调用次数超过 5 次，Chrome 会将最小时间间隔设置为 4 毫秒。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">cb</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>cb<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    n<span class="token operator">--</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMilliseconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>cb<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>因此 <code>setTimeout()</code> 不适合用于做动画，可以用 <code>window.requestAnimationFrame()</code>。</p> <h2 id="xmlhttprequest"><a href="#xmlhttprequest" class="header-anchor">#</a> XMLHttpRequest</h2> <p>在 Ajax 编程中，我们通过 XHR 异步请求一个资源，JS 代码如下：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>浏览器内部也是通过事件循环系统实现的，渲染进程通过 IPC 通知网络进程加载资源。等资源加载完毕后，网络进程通过 IPC 往消息队列里面添加一个任务。</p> <h2 id="宏任务-微任务"><a href="#宏任务-微任务" class="header-anchor">#</a> 宏任务 &amp; 微任务</h2> <p>只有 Promise 和 MutationObserver 可以创建微任务。</p> <p>一个宏任务内对应一个微任务队列，只有所有微任务执行完毕这个宏任务才算完成。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chend0316/blog/edit/master/docs/frontend/browser/event-loop.md" target="_blank" rel="noopener noreferrer">编辑此页面</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后编辑:</span> <span class="time">10/11/2020, 1:31:12 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6adb2d0f.js" defer></script><script src="/assets/js/2.1feacdd0.js" defer></script><script src="/assets/js/25.9eda682c.js" defer></script>
+  </body>
+</html>
