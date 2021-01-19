@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>配置 Vue 工程环境 | 陈东的博客</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.abfd12c2.css" as="style"><link rel="preload" href="/assets/js/app.60b5f165.js" as="script"><link rel="preload" href="/assets/js/2.2c425a4d.js" as="script"><link rel="preload" href="/assets/js/55.d7fd51c3.js" as="script"><link rel="prefetch" href="/assets/js/10.f6048381.js"><link rel="prefetch" href="/assets/js/100.0c67a682.js"><link rel="prefetch" href="/assets/js/101.0d46bdd5.js"><link rel="prefetch" href="/assets/js/102.4b299853.js"><link rel="prefetch" href="/assets/js/103.c6d77c0f.js"><link rel="prefetch" href="/assets/js/104.603f1d73.js"><link rel="prefetch" href="/assets/js/105.cf74a8d4.js"><link rel="prefetch" href="/assets/js/106.2807545c.js"><link rel="prefetch" href="/assets/js/107.45517a52.js"><link rel="prefetch" href="/assets/js/108.6623c87f.js"><link rel="prefetch" href="/assets/js/109.b5f6ba30.js"><link rel="prefetch" href="/assets/js/11.1950864d.js"><link rel="prefetch" href="/assets/js/110.40da3cbd.js"><link rel="prefetch" href="/assets/js/111.6eee5102.js"><link rel="prefetch" href="/assets/js/112.1647130c.js"><link rel="prefetch" href="/assets/js/12.86a2b49c.js"><link rel="prefetch" href="/assets/js/13.2aec249b.js"><link rel="prefetch" href="/assets/js/14.3ef1be5d.js"><link rel="prefetch" href="/assets/js/15.69cf0651.js"><link rel="prefetch" href="/assets/js/16.0e9a70f2.js"><link rel="prefetch" href="/assets/js/17.36cc1497.js"><link rel="prefetch" href="/assets/js/18.7533416d.js"><link rel="prefetch" href="/assets/js/19.d7c517bf.js"><link rel="prefetch" href="/assets/js/20.7cc7dd34.js"><link rel="prefetch" href="/assets/js/21.a34fe19c.js"><link rel="prefetch" href="/assets/js/22.74bb5373.js"><link rel="prefetch" href="/assets/js/23.36e0eaa2.js"><link rel="prefetch" href="/assets/js/24.9c1afac1.js"><link rel="prefetch" href="/assets/js/25.db0dacb3.js"><link rel="prefetch" href="/assets/js/26.0243e6cb.js"><link rel="prefetch" href="/assets/js/27.1b79e42b.js"><link rel="prefetch" href="/assets/js/28.074f8486.js"><link rel="prefetch" href="/assets/js/29.5a17eefd.js"><link rel="prefetch" href="/assets/js/3.e11b8926.js"><link rel="prefetch" href="/assets/js/30.2f4eb592.js"><link rel="prefetch" href="/assets/js/31.6bd2ba2a.js"><link rel="prefetch" href="/assets/js/32.28953dd2.js"><link rel="prefetch" href="/assets/js/33.b4b70635.js"><link rel="prefetch" href="/assets/js/34.c3f0d6a8.js"><link rel="prefetch" href="/assets/js/35.153e8bf2.js"><link rel="prefetch" href="/assets/js/36.a75f0e1a.js"><link rel="prefetch" href="/assets/js/37.43d82572.js"><link rel="prefetch" href="/assets/js/38.cb081d09.js"><link rel="prefetch" href="/assets/js/39.70e72108.js"><link rel="prefetch" href="/assets/js/4.55274f06.js"><link rel="prefetch" href="/assets/js/40.c805bb38.js"><link rel="prefetch" href="/assets/js/41.54a505a5.js"><link rel="prefetch" href="/assets/js/42.930be87b.js"><link rel="prefetch" href="/assets/js/43.00d5f502.js"><link rel="prefetch" href="/assets/js/44.d42b0051.js"><link rel="prefetch" href="/assets/js/45.b0ef491f.js"><link rel="prefetch" href="/assets/js/46.9e687dfe.js"><link rel="prefetch" href="/assets/js/47.565bbdf7.js"><link rel="prefetch" href="/assets/js/48.f5707349.js"><link rel="prefetch" href="/assets/js/49.f49bcc89.js"><link rel="prefetch" href="/assets/js/5.05cbb77f.js"><link rel="prefetch" href="/assets/js/50.f0369334.js"><link rel="prefetch" href="/assets/js/51.a5c2d256.js"><link rel="prefetch" href="/assets/js/52.5d4292ba.js"><link rel="prefetch" href="/assets/js/53.f6fece29.js"><link rel="prefetch" href="/assets/js/54.316c04d3.js"><link rel="prefetch" href="/assets/js/56.ea68a14b.js"><link rel="prefetch" href="/assets/js/57.37fcac4d.js"><link rel="prefetch" href="/assets/js/58.d8e3bd41.js"><link rel="prefetch" href="/assets/js/59.fd6d7d73.js"><link rel="prefetch" href="/assets/js/6.5b25d5b7.js"><link rel="prefetch" href="/assets/js/60.41ae2a7a.js"><link rel="prefetch" href="/assets/js/61.3e57ae68.js"><link rel="prefetch" href="/assets/js/62.17cb9568.js"><link rel="prefetch" href="/assets/js/63.bbfb63a2.js"><link rel="prefetch" href="/assets/js/64.44734951.js"><link rel="prefetch" href="/assets/js/65.7f0d3e27.js"><link rel="prefetch" href="/assets/js/66.c61201b3.js"><link rel="prefetch" href="/assets/js/67.a1326668.js"><link rel="prefetch" href="/assets/js/68.5dfa95f7.js"><link rel="prefetch" href="/assets/js/69.077ebd41.js"><link rel="prefetch" href="/assets/js/7.84d64611.js"><link rel="prefetch" href="/assets/js/70.90cfa7f5.js"><link rel="prefetch" href="/assets/js/71.3824a09e.js"><link rel="prefetch" href="/assets/js/72.eae5456b.js"><link rel="prefetch" href="/assets/js/73.779833d1.js"><link rel="prefetch" href="/assets/js/74.de44ad26.js"><link rel="prefetch" href="/assets/js/75.309a7e6c.js"><link rel="prefetch" href="/assets/js/76.f8e0dd28.js"><link rel="prefetch" href="/assets/js/77.b1f1028c.js"><link rel="prefetch" href="/assets/js/78.5d2273db.js"><link rel="prefetch" href="/assets/js/79.0e05a0a8.js"><link rel="prefetch" href="/assets/js/8.72118f7b.js"><link rel="prefetch" href="/assets/js/80.7cb4875c.js"><link rel="prefetch" href="/assets/js/81.c62ab44d.js"><link rel="prefetch" href="/assets/js/82.c6d400b0.js"><link rel="prefetch" href="/assets/js/83.d1aa153a.js"><link rel="prefetch" href="/assets/js/84.455fbf0c.js"><link rel="prefetch" href="/assets/js/85.7e78bf9c.js"><link rel="prefetch" href="/assets/js/86.b6dd7f97.js"><link rel="prefetch" href="/assets/js/87.5dc3c781.js"><link rel="prefetch" href="/assets/js/88.bbbe53bb.js"><link rel="prefetch" href="/assets/js/89.0036bac9.js"><link rel="prefetch" href="/assets/js/9.5853a9af.js"><link rel="prefetch" href="/assets/js/90.cc418afe.js"><link rel="prefetch" href="/assets/js/91.9b1dec12.js"><link rel="prefetch" href="/assets/js/92.f14da7ca.js"><link rel="prefetch" href="/assets/js/93.6d7e0619.js"><link rel="prefetch" href="/assets/js/94.074d8ed9.js"><link rel="prefetch" href="/assets/js/95.c392bee6.js"><link rel="prefetch" href="/assets/js/96.f22394bf.js"><link rel="prefetch" href="/assets/js/97.7aa18a21.js"><link rel="prefetch" href="/assets/js/98.d5066be1.js"><link rel="prefetch" href="/assets/js/99.29843120.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.abfd12c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">陈东的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/leetcode/" class="nav-link">
+  力扣刷题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/admin-in-action/" class="nav-link">
+  开发实战
+</a></li><li class="dropdown-item"><h4>
+          基本功
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  JavaScript 语言
+</a></li><li class="dropdown-subitem"><a href="/frontend/api/" class="nav-link">
+  JavaScript API
+</a></li><li class="dropdown-subitem"><a href="/frontend/browser/" class="nav-link">
+  浏览器
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link router-link-active">
+  三大框架
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机专业" class="dropdown-title"><span class="title">计算机专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/leetcode/" class="nav-link">
+  力扣刷题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/admin-in-action/" class="nav-link">
+  开发实战
+</a></li><li class="dropdown-item"><h4>
+          基本功
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  JavaScript 语言
+</a></li><li class="dropdown-subitem"><a href="/frontend/api/" class="nav-link">
+  JavaScript API
+</a></li><li class="dropdown-subitem"><a href="/frontend/browser/" class="nav-link">
+  浏览器
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link router-link-active">
+  三大框架
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机专业" class="dropdown-title"><span class="title">计算机专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/frontend/framework/" aria-current="page" class="sidebar-link">原理和思想</a></li><li><a href="/frontend/framework/react.html" class="sidebar-link">React</a></li><li><a href="/frontend/framework/redux.html" class="sidebar-link">Redux</a></li><li><a href="/frontend/framework/vue.html" class="sidebar-link">Vue</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="配置-vue-工程环境"><a href="#配置-vue-工程环境" class="header-anchor">#</a> 配置 Vue 工程环境</h1> <p>虽然我们有开箱即用的 vue-cli 脚手架，但不代表我们不需要理解 Vue 是如何跑起来的，因此有必要学习在不用 vue-cli 的情况下如何配置 Vue 工程。</p> <h2 id="开篇介绍"><a href="#开篇介绍" class="header-anchor">#</a> 开篇介绍</h2> <h3 id="阅读前的环境准备工作"><a href="#阅读前的环境准备工作" class="header-anchor">#</a> 阅读前的环境准备工作</h3> <p>本文从零开始，项目初始时只有一个<code>package.json</code>文件，文件里面也只是一个空对象，如下：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="阅读本文前需要具备的知识"><a href="#阅读本文前需要具备的知识" class="header-anchor">#</a> 阅读本文前需要具备的知识</h3> <ul><li>包管理工具可选 npm、yarn，这里采用 npm</li> <li>打包工具这里选用 Webpack</li> <li>Vue 应用开发一般会编写 .vue 后缀的单文件组件 (SFC)，这是需要配置的</li> <li>如果要用 TypeScript，也要进行配置</li></ul> <h3 id="本文知识点"><a href="#本文知识点" class="header-anchor">#</a> 本文知识点</h3> <p>基础：</p> <ul><li>不使用 SFC 的情况下搭建 Vue 工程</li> <li>使用 SFC</li> <li>使用 JSX</li></ul> <p>为什么说 Vue 对 TypeScript 的支持不友好？</p> <ul><li>SFC + TypeScript 的组合，需要先编译 SFC 提取出<code>&lt;script&gt;</code>代码块，然后编译 TS，这让 tsconfig 文件变得怪异</li> <li>Vue 的 Options API 风格对人类友好，但对 TS 类型推断 (Type Inference) 不友好</li> <li>Vue HTML 模板中的插值表达式 (Interpolations) 难以启用 TS 类型检查</li></ul> <h2 id="webpack"><a href="#webpack" class="header-anchor">#</a> Webpack</h2> <p>Webpack 的工作流程：</p> <ul><li>用 npm 安装：<code>npm install -D webpack webpack-cli</code></li> <li>编写 webpack.config.js 配置文件</li> <li>运行 Webpack</li></ul> <p>Webpack 最小配置：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token operator">:</span> <span class="token string">'./index.js'</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    filename<span class="token operator">:</span> <span class="token string">'bundle.js'</span><span class="token punctuation">,</span>
+    path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="sfc-配置"><a href="#sfc-配置" class="header-anchor">#</a> SFC 配置</h3> <p>虽然理论上不用，但一般 Vue 项目都会编写 <a href="https://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="noopener noreferrer">SFC<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，这就需要引入 <a href="https://vue-loader.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">Vue Loader<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 来编译 SFC。Loader 和 Plugin 都是 Webpack 的概念。</p> <p>安装：<code>npm install -D vue-loader vue-template-compiler</code>。</p> <p>编译时，需要将 SFC 拆分为 HTML、JS、CSS 这三个不同部分，然后对于不同部分采用各自的 Webpack Loader 处理。对文件一分三的操作只能用 Webpack Plugin 实现。所以 Webpack 配置文件中，我们即要引入 <code>vue-loader</code> 也要引入 <code>VueLoaderPlugin</code>，代码如下。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// webpack.config.js</span>
+<span class="token keyword">const</span> VueLoaderPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vue-loader/lib/plugin'</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.vue$/</span><span class="token punctuation">,</span>
+        loader<span class="token operator">:</span> <span class="token string">'vue-loader'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">VueLoaderPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过上面的配置，我们就能 <code>import</code> SFC 了，如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token string">'./App.vue'</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="jsx-配置"><a href="#jsx-配置" class="header-anchor">#</a> JSX 配置</h3> <h2 id="typescript-配置"><a href="#typescript-配置" class="header-anchor">#</a> TypeScript 配置</h2></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chend0316/blog/edit/master/docs/frontend/framework/vue-setup.md" target="_blank" rel="noopener noreferrer">编辑此页面</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后编辑:</span> <span class="time">1/19/2021, 12:57:26 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.60b5f165.js" defer></script><script src="/assets/js/2.2c425a4d.js" defer></script><script src="/assets/js/55.d7fd51c3.js" defer></script>
+  </body>
+</html>
