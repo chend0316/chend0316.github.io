@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring Data JPA 入门教程 | 陈东的博客</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.abfd12c2.css" as="style"><link rel="preload" href="/assets/js/app.ff6f6b81.js" as="script"><link rel="preload" href="/assets/js/2.69342379.js" as="script"><link rel="preload" href="/assets/js/92.8e4fe29e.js" as="script"><link rel="prefetch" href="/assets/js/10.c3ad9a92.js"><link rel="prefetch" href="/assets/js/100.2ce983e4.js"><link rel="prefetch" href="/assets/js/101.e9d18993.js"><link rel="prefetch" href="/assets/js/102.0e18f7f3.js"><link rel="prefetch" href="/assets/js/103.92eefaa2.js"><link rel="prefetch" href="/assets/js/104.7960e86e.js"><link rel="prefetch" href="/assets/js/105.225d0d1f.js"><link rel="prefetch" href="/assets/js/106.e2972bce.js"><link rel="prefetch" href="/assets/js/107.95d603bc.js"><link rel="prefetch" href="/assets/js/108.a0b4a47f.js"><link rel="prefetch" href="/assets/js/109.5f5bef11.js"><link rel="prefetch" href="/assets/js/11.f2283be1.js"><link rel="prefetch" href="/assets/js/110.b9972ee4.js"><link rel="prefetch" href="/assets/js/111.01c6155b.js"><link rel="prefetch" href="/assets/js/112.4d80636b.js"><link rel="prefetch" href="/assets/js/113.3a0a478b.js"><link rel="prefetch" href="/assets/js/114.ddb91394.js"><link rel="prefetch" href="/assets/js/115.bc478be0.js"><link rel="prefetch" href="/assets/js/116.3f6c33aa.js"><link rel="prefetch" href="/assets/js/117.3cd3c216.js"><link rel="prefetch" href="/assets/js/12.9682ba28.js"><link rel="prefetch" href="/assets/js/13.80e3a96c.js"><link rel="prefetch" href="/assets/js/14.e153cf79.js"><link rel="prefetch" href="/assets/js/15.e60e902c.js"><link rel="prefetch" href="/assets/js/16.9486e801.js"><link rel="prefetch" href="/assets/js/17.b6bc78d4.js"><link rel="prefetch" href="/assets/js/18.083c01ee.js"><link rel="prefetch" href="/assets/js/19.70912055.js"><link rel="prefetch" href="/assets/js/20.3c545495.js"><link rel="prefetch" href="/assets/js/21.73e3d881.js"><link rel="prefetch" href="/assets/js/22.e607b97a.js"><link rel="prefetch" href="/assets/js/23.978c7d99.js"><link rel="prefetch" href="/assets/js/24.1b4d915e.js"><link rel="prefetch" href="/assets/js/25.851a206c.js"><link rel="prefetch" href="/assets/js/26.f9fcea22.js"><link rel="prefetch" href="/assets/js/27.fde78465.js"><link rel="prefetch" href="/assets/js/28.4b7b6164.js"><link rel="prefetch" href="/assets/js/29.00296663.js"><link rel="prefetch" href="/assets/js/3.e11b8926.js"><link rel="prefetch" href="/assets/js/30.f6efbdd5.js"><link rel="prefetch" href="/assets/js/31.70a67be5.js"><link rel="prefetch" href="/assets/js/32.1d970c11.js"><link rel="prefetch" href="/assets/js/33.5af0776d.js"><link rel="prefetch" href="/assets/js/34.c69357a7.js"><link rel="prefetch" href="/assets/js/35.f18bf065.js"><link rel="prefetch" href="/assets/js/36.07d69c89.js"><link rel="prefetch" href="/assets/js/37.a42818af.js"><link rel="prefetch" href="/assets/js/38.9ba9b088.js"><link rel="prefetch" href="/assets/js/39.80cd8820.js"><link rel="prefetch" href="/assets/js/4.f6800b1c.js"><link rel="prefetch" href="/assets/js/40.6a6e1a23.js"><link rel="prefetch" href="/assets/js/41.b3ae5317.js"><link rel="prefetch" href="/assets/js/42.1aae4a1b.js"><link rel="prefetch" href="/assets/js/43.e0051c0c.js"><link rel="prefetch" href="/assets/js/44.0d5e196a.js"><link rel="prefetch" href="/assets/js/45.c85c7030.js"><link rel="prefetch" href="/assets/js/46.7e3394f2.js"><link rel="prefetch" href="/assets/js/47.a7e54f11.js"><link rel="prefetch" href="/assets/js/48.deee15ff.js"><link rel="prefetch" href="/assets/js/49.13f2954e.js"><link rel="prefetch" href="/assets/js/5.180c9d7d.js"><link rel="prefetch" href="/assets/js/50.308697a4.js"><link rel="prefetch" href="/assets/js/51.a58f09b5.js"><link rel="prefetch" href="/assets/js/52.30e62359.js"><link rel="prefetch" href="/assets/js/53.bb3abbb1.js"><link rel="prefetch" href="/assets/js/54.d64c6dad.js"><link rel="prefetch" href="/assets/js/55.24a74513.js"><link rel="prefetch" href="/assets/js/56.a6b3c398.js"><link rel="prefetch" href="/assets/js/57.0ab4d15c.js"><link rel="prefetch" href="/assets/js/58.411dfc00.js"><link rel="prefetch" href="/assets/js/59.e49534d5.js"><link rel="prefetch" href="/assets/js/6.b0fcf329.js"><link rel="prefetch" href="/assets/js/60.2cd9032f.js"><link rel="prefetch" href="/assets/js/61.50bfded6.js"><link rel="prefetch" href="/assets/js/62.4609088f.js"><link rel="prefetch" href="/assets/js/63.a84b754e.js"><link rel="prefetch" href="/assets/js/64.b48fdab8.js"><link rel="prefetch" href="/assets/js/65.f76db9fa.js"><link rel="prefetch" href="/assets/js/66.b1015305.js"><link rel="prefetch" href="/assets/js/67.b9fed10a.js"><link rel="prefetch" href="/assets/js/68.e259fcce.js"><link rel="prefetch" href="/assets/js/69.86862e4c.js"><link rel="prefetch" href="/assets/js/7.a318c558.js"><link rel="prefetch" href="/assets/js/70.634b8ffc.js"><link rel="prefetch" href="/assets/js/71.6df4e74f.js"><link rel="prefetch" href="/assets/js/72.71f1c3e6.js"><link rel="prefetch" href="/assets/js/73.45b8a31a.js"><link rel="prefetch" href="/assets/js/74.d7026358.js"><link rel="prefetch" href="/assets/js/75.223cae2f.js"><link rel="prefetch" href="/assets/js/76.ab935578.js"><link rel="prefetch" href="/assets/js/77.e6a710a8.js"><link rel="prefetch" href="/assets/js/78.c52c90b7.js"><link rel="prefetch" href="/assets/js/79.6216e524.js"><link rel="prefetch" href="/assets/js/8.c975681b.js"><link rel="prefetch" href="/assets/js/80.ca203dcc.js"><link rel="prefetch" href="/assets/js/81.690f2e6c.js"><link rel="prefetch" href="/assets/js/82.357cb3ad.js"><link rel="prefetch" href="/assets/js/83.9cb937f0.js"><link rel="prefetch" href="/assets/js/84.c3ca8537.js"><link rel="prefetch" href="/assets/js/85.f2744611.js"><link rel="prefetch" href="/assets/js/86.080100fc.js"><link rel="prefetch" href="/assets/js/87.cd488b65.js"><link rel="prefetch" href="/assets/js/88.6414ab0a.js"><link rel="prefetch" href="/assets/js/89.acf0fd59.js"><link rel="prefetch" href="/assets/js/9.ff3c8afd.js"><link rel="prefetch" href="/assets/js/90.0fc204d9.js"><link rel="prefetch" href="/assets/js/91.116e3a2e.js"><link rel="prefetch" href="/assets/js/93.6f276a4d.js"><link rel="prefetch" href="/assets/js/94.bf621b6e.js"><link rel="prefetch" href="/assets/js/95.ea3d782c.js"><link rel="prefetch" href="/assets/js/96.fef23b36.js"><link rel="prefetch" href="/assets/js/97.a11ec290.js"><link rel="prefetch" href="/assets/js/98.2cd95a98.js"><link rel="prefetch" href="/assets/js/99.c5cefc73.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.abfd12c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">陈东的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="程序员基本功" class="dropdown-title"><span class="title">程序员基本功</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programmer/leetcode/" class="nav-link">
+  力扣刷题
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/web-architecture.html" class="nav-link">
+  Web架构师
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/admin-in-action/" class="nav-link">
+  开发实战
+</a></li><li class="dropdown-item"><h4>
+          基本功
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  JavaScript 语言
+</a></li><li class="dropdown-subitem"><a href="/frontend/api/" class="nav-link">
+  JavaScript API
+</a></li><li class="dropdown-subitem"><a href="/frontend/browser/" class="nav-link">
+  浏览器
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架 &amp; 工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  三大框架
+</a></li><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机专业" class="dropdown-title"><span class="title">计算机专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="程序员基本功" class="dropdown-title"><span class="title">程序员基本功</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programmer/leetcode/" class="nav-link">
+  力扣刷题
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/web-architecture.html" class="nav-link">
+  Web架构师
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/admin-in-action/" class="nav-link">
+  开发实战
+</a></li><li class="dropdown-item"><h4>
+          基本功
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  JavaScript 语言
+</a></li><li class="dropdown-subitem"><a href="/frontend/api/" class="nav-link">
+  JavaScript API
+</a></li><li class="dropdown-subitem"><a href="/frontend/browser/" class="nav-link">
+  浏览器
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架 &amp; 工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  三大框架
+</a></li><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机专业" class="dropdown-title"><span class="title">计算机专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Spring Data JPA 入门教程</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/java-tutorial-spring-data-jpa/#环境搭建" class="sidebar-link">环境搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#jpa-h2-环境" class="sidebar-link">JPA + H2 环境</a></li><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#jpa-mysql-环境" class="sidebar-link">JPA + MySQL 环境</a></li></ul></li><li><a href="/pages/java-tutorial-spring-data-jpa/#定义-entity、repository" class="sidebar-link">定义 Entity、Repository</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#定义-entity" class="sidebar-link">定义 Entity</a></li><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#定义-repository" class="sidebar-link">定义 Repository</a></li><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#使用-repository-访问数据库" class="sidebar-link">使用 Repository 访问数据库</a></li></ul></li><li><a href="/pages/java-tutorial-spring-data-jpa/#entity" class="sidebar-link">Entity</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#完善-entity-定义" class="sidebar-link">完善 Entity 定义</a></li><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#如何定义多表连接" class="sidebar-link">如何定义多表连接</a></li><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#如何处理金额" class="sidebar-link">如何处理金额</a></li></ul></li><li><a href="/pages/java-tutorial-spring-data-jpa/#repository" class="sidebar-link">Repository</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#定义查询" class="sidebar-link">定义查询</a></li><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#定义分页查询" class="sidebar-link">定义分页查询</a></li><li class="sidebar-sub-header"><a href="/pages/java-tutorial-spring-data-jpa/#自定义-sql-查询语句" class="sidebar-link">自定义 SQL 查询语句</a></li></ul></li><li><a href="/pages/java-tutorial-spring-data-jpa/#参考资料" class="sidebar-link">参考资料</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="spring-data-jpa-入门教程"><a href="#spring-data-jpa-入门教程" class="header-anchor">#</a> Spring Data JPA 入门教程</h1> <h2 id="环境搭建"><a href="#环境搭建" class="header-anchor">#</a> 环境搭建</h2> <h3 id="jpa-h2-环境"><a href="#jpa-h2-环境" class="header-anchor">#</a> JPA + H2 环境</h3> <p>略，请看 Spring 官网的 Guides。</p> <h3 id="jpa-mysql-环境"><a href="#jpa-mysql-环境" class="header-anchor">#</a> JPA + MySQL 环境</h3> <p>在学习阶段使用 H2 数据库是很方便的，但最终到了生产肯定要切换到 MySQL。</p> <p>首先要启动 MySQL 服务器，这里推荐使用 Docker，参考<a href="https://hub.docker.com/_/mysql" target="_blank" rel="noopener noreferrer">Docker 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ul><li>启动服务：<code>$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag</code></li> <li>测试服务是否启动成功：<code>$ docker run -it --rm mysql:tag mysql -h192.168.x.x -uroot -p</code></li></ul> <p>然后在 Spring 项目中连接 MySQL，参考<a href="https://spring.io/guides/gs/accessing-data-mysql/" target="_blank" rel="noopener noreferrer">Spring 官方教程<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，关键步骤：</p> <ul><li>启动 MySQL</li> <li>在 MySQL 中创建一个数据库</li> <li>在 MySQL 中创建一个用户</li> <li>在 application.properties 中配置刚创建的 MySQL 数据库、用户名、密码</li> <li>进行后续的开发</li></ul> <h2 id="定义-entity、repository"><a href="#定义-entity、repository" class="header-anchor">#</a> 定义 Entity、Repository</h2> <h3 id="定义-entity"><a href="#定义-entity" class="header-anchor">#</a> 定义 Entity</h3> <p>在 JPA 中，实体 (Entity) 相当于数据模型。下面我们创建一个咖啡实体。</p> <p>首先定义咖啡的 POJO，为了方便业务使用，我们还定义了一个构造函数：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Coffee</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Coffee</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>为了让 POJO 被识别为 JPA Entity，必须有 <code>@Entity</code>，光这样还不够，IDE 会提示说还需要 <code>@Id</code> 和无参构造函数。</p> <div class="language-java extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br></div><pre class="language-java"><code><span class="token annotation punctuation">@Entity</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Coffee</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Coffee</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">Coffee</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 省略大量的 getter/setter 方法</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>构造函数、getter/setter 写起来简单枯燥，我们使用 lombok 提供的注解来减少样板代码。</p> <div class="language-java extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><br><br><br></div><pre class="language-java"><code><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span>
+<span class="token annotation punctuation">@AllArgsConstructor</span>
+<span class="token annotation punctuation">@Builder</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Coffee</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="定义-repository"><a href="#定义-repository" class="header-anchor">#</a> 定义 Repository</h3> <p>Repository 是 Spring 对数据访问层的抽象，使用时需要定义一个继承自 <code>org.springframework.data.repository.Repository</code> 的接口。</p> <p>下面为我们的咖啡实体定义一个 Repository：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">CoffeeRepository</span> <span class="token keyword">extends</span> <span class="token class-name">CrudRepository</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Coffee</span><span class="token punctuation">,</span> <span class="token class-name">Long</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="使用-repository-访问数据库"><a href="#使用-repository-访问数据库" class="header-anchor">#</a> 使用 Repository 访问数据库</h3> <p>我们先来看一下入口类，这里用到的 SpringBoot 有点超纲，但没关系，我们没必要一开始就搞明白所有知识点。现在我们只需要知道 <code>run()</code> 是入口函数。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token annotation punctuation">@Slf4j</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringbucksApplication</span> <span class="token keyword">implements</span> <span class="token class-name">ApplicationRunner</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">SpringbucksApplication</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">ApplicationArguments</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>下面我们使用前面定义好的 CoffeeRepository 读写数据库：</p> <div class="language-java extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br></div><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token annotation punctuation">@Slf4j</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringbucksApplication</span> <span class="token keyword">implements</span> <span class="token class-name">ApplicationRunner</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">CoffeeRepository</span> coffeeRepository<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">SpringbucksApplication</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">ApplicationArguments</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token function">initOrders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">initOrders</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Coffee</span> latte <span class="token operator">=</span> <span class="token class-name">Coffee</span><span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">id</span><span class="token punctuation">(</span><span class="token number">1L</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token string">&quot;latte&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">price</span><span class="token punctuation">(</span><span class="token number">11.9</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Coffee</span> espresso <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Coffee</span><span class="token punctuation">(</span><span class="token number">2L</span><span class="token punctuation">,</span> <span class="token string">&quot;espresso&quot;</span><span class="token punctuation">,</span> <span class="token number">13.9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        coffeeRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span>latte<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        coffeeRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span>espresso<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;共{}个咖啡&quot;</span><span class="token punctuation">,</span> coffeeRepository<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        coffeeRepository<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>c <span class="token operator">-&gt;</span> log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;咖啡名：{}，价格：{}&quot;</span><span class="token punctuation">,</span> c<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> c<span class="token punctuation">.</span><span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="entity"><a href="#entity" class="header-anchor">#</a> Entity</h2> <h3 id="完善-entity-定义"><a href="#完善-entity-定义" class="header-anchor">#</a> 完善 Entity 定义</h3> <p>知识点如下：</p> <ul><li>一般的实践会增加 <code>createTime</code> 和 <code>updateTime</code> 这两个字段</li> <li>使用 <code>@Table</code> 指定表名，如果省略则表名默认为类名</li> <li>主键用 <code>@Id</code>，一般会配合 <code>@GeneratedValue</code> 实现主键自动填充</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;T_COFFEE&quot;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span>
+<span class="token annotation punctuation">@AllArgsConstructor</span>
+<span class="token annotation punctuation">@Builder</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Coffee</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@CreationTimestamp</span>
+    <span class="token keyword">private</span> <span class="token class-name">Date</span> createTime<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@UpdateTimestamp</span>
+    <span class="token keyword">private</span> <span class="token class-name">Date</span> updateTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="如何定义多表连接"><a href="#如何定义多表连接" class="header-anchor">#</a> 如何定义多表连接</h3> <h3 id="如何处理金额"><a href="#如何处理金额" class="header-anchor">#</a> 如何处理金额</h3> <p>涉及到金额的系统，一定要注意，不要用浮点数存储金额。</p> <h2 id="repository"><a href="#repository" class="header-anchor">#</a> Repository</h2> <p>Repository 是一个继承自 <code>Repository</code> 的接口。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">CoffeeRepository</span> <span class="token keyword">extends</span> <span class="token class-name">CrudRepository</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Coffee</span><span class="token punctuation">,</span> <span class="token class-name">Long</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Coffee</span><span class="token punctuation">&gt;</span></span> <span class="token function">findByNameIgnoreCase</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Coffee</span><span class="token punctuation">&gt;</span></span> <span class="token function">findByPriceBetween</span><span class="token punctuation">(</span><span class="token keyword">double</span> start<span class="token punctuation">,</span> <span class="token keyword">double</span> end<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="定义查询"><a href="#定义查询" class="header-anchor">#</a> 定义查询</h3> <h3 id="定义分页查询"><a href="#定义分页查询" class="header-anchor">#</a> 定义分页查询</h3> <h3 id="自定义-sql-查询语句"><a href="#自定义-sql-查询语句" class="header-anchor">#</a> 自定义 SQL 查询语句</h3> <h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <ul><li><a href="https://spring.io/guides/gs/accessing-data-jpa/" target="_blank" rel="noopener noreferrer">Spring Data JPA 官方教程<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</li> <li><a href="https://time.geekbang.org/course/detail/100023501-82882" target="_blank" rel="noopener noreferrer">极客时间《玩转Spring全家桶》<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html" target="_blank" rel="noopener noreferrer">Hibernate 5.4 官方指南<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chend0316/blog/edit/master/docs/pages/java-tutorial-spring-data-jpa/index.md" target="_blank" rel="noopener noreferrer">编辑此页面</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后编辑:</span> <span class="time">2/1/2021, 2:35:19 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ff6f6b81.js" defer></script><script src="/assets/js/2.69342379.js" defer></script><script src="/assets/js/92.8e4fe29e.js" defer></script>
+  </body>
+</html>
