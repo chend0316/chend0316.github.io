@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>字符串算法 | 陈东的博客</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.abfd12c2.css" as="style"><link rel="preload" href="/assets/js/app.5f850b76.js" as="script"><link rel="preload" href="/assets/js/2.2c425a4d.js" as="script"><link rel="preload" href="/assets/js/119.acf96fb7.js" as="script"><link rel="prefetch" href="/assets/js/10.7da5f3ad.js"><link rel="prefetch" href="/assets/js/100.e41fb464.js"><link rel="prefetch" href="/assets/js/101.57f59da0.js"><link rel="prefetch" href="/assets/js/102.dddb55ab.js"><link rel="prefetch" href="/assets/js/103.0082cc58.js"><link rel="prefetch" href="/assets/js/104.9453b8d0.js"><link rel="prefetch" href="/assets/js/105.7d155283.js"><link rel="prefetch" href="/assets/js/106.8cf26f09.js"><link rel="prefetch" href="/assets/js/107.1c289bb1.js"><link rel="prefetch" href="/assets/js/108.c6a9714b.js"><link rel="prefetch" href="/assets/js/109.f48dc9db.js"><link rel="prefetch" href="/assets/js/11.7df4bb17.js"><link rel="prefetch" href="/assets/js/110.602a802f.js"><link rel="prefetch" href="/assets/js/111.33bb1263.js"><link rel="prefetch" href="/assets/js/112.ac69df93.js"><link rel="prefetch" href="/assets/js/113.1bd67ddb.js"><link rel="prefetch" href="/assets/js/114.cbfd0ab8.js"><link rel="prefetch" href="/assets/js/115.abbded19.js"><link rel="prefetch" href="/assets/js/116.e1c24f83.js"><link rel="prefetch" href="/assets/js/117.e3772e3f.js"><link rel="prefetch" href="/assets/js/118.0f4fd363.js"><link rel="prefetch" href="/assets/js/12.e19262c8.js"><link rel="prefetch" href="/assets/js/120.6ecf5a44.js"><link rel="prefetch" href="/assets/js/121.7c2294ec.js"><link rel="prefetch" href="/assets/js/122.4953b2a3.js"><link rel="prefetch" href="/assets/js/13.dcb34226.js"><link rel="prefetch" href="/assets/js/14.ca0918d3.js"><link rel="prefetch" href="/assets/js/15.c5b041d7.js"><link rel="prefetch" href="/assets/js/16.1a6d155a.js"><link rel="prefetch" href="/assets/js/17.2a3f9dc3.js"><link rel="prefetch" href="/assets/js/18.77c56940.js"><link rel="prefetch" href="/assets/js/19.3bfbceda.js"><link rel="prefetch" href="/assets/js/20.c865eaa1.js"><link rel="prefetch" href="/assets/js/21.514a9167.js"><link rel="prefetch" href="/assets/js/22.f8fc144b.js"><link rel="prefetch" href="/assets/js/23.b063ec21.js"><link rel="prefetch" href="/assets/js/24.677fa9fb.js"><link rel="prefetch" href="/assets/js/25.8012d5b8.js"><link rel="prefetch" href="/assets/js/26.b4ff63f9.js"><link rel="prefetch" href="/assets/js/27.e2ea45ef.js"><link rel="prefetch" href="/assets/js/28.eb97060c.js"><link rel="prefetch" href="/assets/js/29.055923f7.js"><link rel="prefetch" href="/assets/js/3.44885dee.js"><link rel="prefetch" href="/assets/js/30.7b9d06b3.js"><link rel="prefetch" href="/assets/js/31.9e31f9ff.js"><link rel="prefetch" href="/assets/js/32.e614b7ca.js"><link rel="prefetch" href="/assets/js/33.cc62ca0f.js"><link rel="prefetch" href="/assets/js/34.bf2261fd.js"><link rel="prefetch" href="/assets/js/35.3738ebfb.js"><link rel="prefetch" href="/assets/js/36.f7a61468.js"><link rel="prefetch" href="/assets/js/37.171bec6b.js"><link rel="prefetch" href="/assets/js/38.25f30f1f.js"><link rel="prefetch" href="/assets/js/39.b63c89a1.js"><link rel="prefetch" href="/assets/js/4.55274f06.js"><link rel="prefetch" href="/assets/js/40.36e6eab4.js"><link rel="prefetch" href="/assets/js/41.74d2fad7.js"><link rel="prefetch" href="/assets/js/42.1888e8c1.js"><link rel="prefetch" href="/assets/js/43.5c5b5222.js"><link rel="prefetch" href="/assets/js/44.80516674.js"><link rel="prefetch" href="/assets/js/45.54b43ee8.js"><link rel="prefetch" href="/assets/js/46.3c4a55ba.js"><link rel="prefetch" href="/assets/js/47.ce6fcf50.js"><link rel="prefetch" href="/assets/js/48.75541a97.js"><link rel="prefetch" href="/assets/js/49.e1a02cf6.js"><link rel="prefetch" href="/assets/js/5.63394485.js"><link rel="prefetch" href="/assets/js/50.0b41a581.js"><link rel="prefetch" href="/assets/js/51.cb7974e9.js"><link rel="prefetch" href="/assets/js/52.a064fd1e.js"><link rel="prefetch" href="/assets/js/53.3a266fe7.js"><link rel="prefetch" href="/assets/js/54.23c6d1fa.js"><link rel="prefetch" href="/assets/js/55.3cfca43a.js"><link rel="prefetch" href="/assets/js/56.5a4f10e0.js"><link rel="prefetch" href="/assets/js/57.4c730a7a.js"><link rel="prefetch" href="/assets/js/58.438b5671.js"><link rel="prefetch" href="/assets/js/59.134a5e80.js"><link rel="prefetch" href="/assets/js/6.2a48126f.js"><link rel="prefetch" href="/assets/js/60.de7e2e50.js"><link rel="prefetch" href="/assets/js/61.fea5dde0.js"><link rel="prefetch" href="/assets/js/62.0899acb3.js"><link rel="prefetch" href="/assets/js/63.f3e30f01.js"><link rel="prefetch" href="/assets/js/64.e442e9ed.js"><link rel="prefetch" href="/assets/js/65.3b2a9967.js"><link rel="prefetch" href="/assets/js/66.070fc937.js"><link rel="prefetch" href="/assets/js/67.1a8cd716.js"><link rel="prefetch" href="/assets/js/68.63d2c782.js"><link rel="prefetch" href="/assets/js/69.d8fac594.js"><link rel="prefetch" href="/assets/js/7.12c747f7.js"><link rel="prefetch" href="/assets/js/70.501f95a6.js"><link rel="prefetch" href="/assets/js/71.ed5ff5d2.js"><link rel="prefetch" href="/assets/js/72.5cc5acde.js"><link rel="prefetch" href="/assets/js/73.e97f4e67.js"><link rel="prefetch" href="/assets/js/74.52bf0192.js"><link rel="prefetch" href="/assets/js/75.e5ae4675.js"><link rel="prefetch" href="/assets/js/76.71b819aa.js"><link rel="prefetch" href="/assets/js/77.859af70c.js"><link rel="prefetch" href="/assets/js/78.2155d9c2.js"><link rel="prefetch" href="/assets/js/79.ca0cddb1.js"><link rel="prefetch" href="/assets/js/8.e2feade4.js"><link rel="prefetch" href="/assets/js/80.2705dbdf.js"><link rel="prefetch" href="/assets/js/81.83259f08.js"><link rel="prefetch" href="/assets/js/82.50aa080a.js"><link rel="prefetch" href="/assets/js/83.37608883.js"><link rel="prefetch" href="/assets/js/84.ff16c4e7.js"><link rel="prefetch" href="/assets/js/85.bc63ebae.js"><link rel="prefetch" href="/assets/js/86.f57810be.js"><link rel="prefetch" href="/assets/js/87.a708f0c7.js"><link rel="prefetch" href="/assets/js/88.ee0b6157.js"><link rel="prefetch" href="/assets/js/89.672a1555.js"><link rel="prefetch" href="/assets/js/9.b0c93114.js"><link rel="prefetch" href="/assets/js/90.b74532ec.js"><link rel="prefetch" href="/assets/js/91.74eaae2a.js"><link rel="prefetch" href="/assets/js/92.2133a58c.js"><link rel="prefetch" href="/assets/js/93.381aed95.js"><link rel="prefetch" href="/assets/js/94.d45d1dc8.js"><link rel="prefetch" href="/assets/js/95.cf3c35ac.js"><link rel="prefetch" href="/assets/js/96.328187f5.js"><link rel="prefetch" href="/assets/js/97.4a0b64db.js"><link rel="prefetch" href="/assets/js/98.2433909a.js"><link rel="prefetch" href="/assets/js/99.558b26cf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.abfd12c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">陈东的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="程序员基本功" class="dropdown-title"><span class="title">程序员基本功</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programmer/data-structures.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/leetcode/" class="nav-link router-link-active">
+  力扣算法
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/language/" class="nav-link">
+  编程语言
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/web-architecture.html" class="nav-link">
+  Web架构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/base/" class="nav-link">
+  基本功
+</a></li><li class="dropdown-item"><h4>
+          框架 &amp; 工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  三大框架
+</a></li><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/admin-in-action/" class="nav-link">
+  中后台常见需求
+</a></li><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用软件" class="dropdown-title"><span class="title">通用软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/cli-app.html" class="nav-link">
+  命令行程序
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/build-tools/" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机专业" class="dropdown-title"><span class="title">计算机专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="程序员基本功" class="dropdown-title"><span class="title">程序员基本功</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programmer/data-structures.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/leetcode/" class="nav-link router-link-active">
+  力扣算法
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/language/" class="nav-link">
+  编程语言
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/programmer/web-architecture.html" class="nav-link">
+  Web架构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/base/" class="nav-link">
+  基本功
+</a></li><li class="dropdown-item"><h4>
+          框架 &amp; 工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  三大框架
+</a></li><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/admin-in-action/" class="nav-link">
+  中后台常见需求
+</a></li><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用软件" class="dropdown-title"><span class="title">通用软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/cli-app.html" class="nav-link">
+  命令行程序
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/build-tools/" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机专业" class="dropdown-title"><span class="title">计算机专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/programmer/leetcode/" aria-current="page" class="sidebar-link">从今天开始刷力扣</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>语言基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/programmer/leetcode/code-template.html" class="sidebar-link">代码模板 (背)</a></li><li><a href="/programmer/leetcode/lang-diff.html" class="sidebar-link">语言差异 (坑)</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>专题讲解</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/programmer/leetcode/topic/search.html" class="sidebar-link">搜索专题</a></li><li><a href="/programmer/leetcode/topic/dp.html" class="sidebar-link">DP 专题</a></li><li><a href="/programmer/leetcode/topic/bin-search.html" class="sidebar-link">二分查找专题</a></li><li><a href="/programmer/leetcode/topic/data-structure.html" class="sidebar-link">数据结构</a></li><li><a href="/programmer/leetcode/topic/topk.html" class="sidebar-link">TopK 专题</a></li><li><a href="/programmer/leetcode/topic/others.html" class="sidebar-link">其它算法专题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="字符串算法"><a href="#字符串算法" class="header-anchor">#</a> 字符串算法</h1> <h2 id="回文串"><a href="#回文串" class="header-anchor">#</a> 回文串</h2> <p>找最长回文子串: 5</p> <p>包含首字符的最长回文子串: 214</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chend0316/blog/edit/master/docs/programmer/leetcode/topic/string.md" target="_blank" rel="noopener noreferrer">编辑此页面</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后编辑:</span> <span class="time">7/24/2021, 9:30:12 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5f850b76.js" defer></script><script src="/assets/js/2.2c425a4d.js" defer></script><script src="/assets/js/119.acf96fb7.js" defer></script>
+  </body>
+</html>
