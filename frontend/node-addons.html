@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Node C++ Addons | 陈东的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.c0b81199.css" as="style"><link rel="preload" href="/assets/js/app.45e8adb9.js" as="script"><link rel="preload" href="/assets/js/2.db376c04.js" as="script"><link rel="preload" href="/assets/js/110.529dbbc2.js" as="script"><link rel="prefetch" href="/assets/js/10.a512e6a6.js"><link rel="prefetch" href="/assets/js/100.7e7aa89e.js"><link rel="prefetch" href="/assets/js/101.e5a0d7cd.js"><link rel="prefetch" href="/assets/js/102.c2a6aef4.js"><link rel="prefetch" href="/assets/js/103.25acf716.js"><link rel="prefetch" href="/assets/js/104.012015e1.js"><link rel="prefetch" href="/assets/js/105.887c8a21.js"><link rel="prefetch" href="/assets/js/106.53f674c3.js"><link rel="prefetch" href="/assets/js/107.fee40376.js"><link rel="prefetch" href="/assets/js/108.02f9d678.js"><link rel="prefetch" href="/assets/js/109.0de86a0d.js"><link rel="prefetch" href="/assets/js/11.1da4c288.js"><link rel="prefetch" href="/assets/js/111.c39b5f37.js"><link rel="prefetch" href="/assets/js/112.f8df2ce6.js"><link rel="prefetch" href="/assets/js/113.5ae3a124.js"><link rel="prefetch" href="/assets/js/114.1d7038a0.js"><link rel="prefetch" href="/assets/js/115.880c1cd3.js"><link rel="prefetch" href="/assets/js/116.bf0901d2.js"><link rel="prefetch" href="/assets/js/117.822d8bca.js"><link rel="prefetch" href="/assets/js/118.05013ac2.js"><link rel="prefetch" href="/assets/js/119.0498e301.js"><link rel="prefetch" href="/assets/js/12.ab430b9e.js"><link rel="prefetch" href="/assets/js/120.712d6b20.js"><link rel="prefetch" href="/assets/js/121.acdf7335.js"><link rel="prefetch" href="/assets/js/122.d6d19f9f.js"><link rel="prefetch" href="/assets/js/123.4f70fbeb.js"><link rel="prefetch" href="/assets/js/124.56785334.js"><link rel="prefetch" href="/assets/js/125.32bd598c.js"><link rel="prefetch" href="/assets/js/126.a90089b9.js"><link rel="prefetch" href="/assets/js/127.bd58fc54.js"><link rel="prefetch" href="/assets/js/128.ed72415a.js"><link rel="prefetch" href="/assets/js/129.ed7cdba4.js"><link rel="prefetch" href="/assets/js/13.05b8d4fe.js"><link rel="prefetch" href="/assets/js/130.a808d9de.js"><link rel="prefetch" href="/assets/js/131.3f88e0ae.js"><link rel="prefetch" href="/assets/js/132.0b3e2d35.js"><link rel="prefetch" href="/assets/js/133.18e336e2.js"><link rel="prefetch" href="/assets/js/134.225ad7e7.js"><link rel="prefetch" href="/assets/js/135.8cfd300f.js"><link rel="prefetch" href="/assets/js/136.e6148d39.js"><link rel="prefetch" href="/assets/js/137.2bba8f22.js"><link rel="prefetch" href="/assets/js/138.89e0efa8.js"><link rel="prefetch" href="/assets/js/139.307c3329.js"><link rel="prefetch" href="/assets/js/14.9c320722.js"><link rel="prefetch" href="/assets/js/140.a6c8183e.js"><link rel="prefetch" href="/assets/js/141.205db4bf.js"><link rel="prefetch" href="/assets/js/142.c79cd414.js"><link rel="prefetch" href="/assets/js/143.80947d7d.js"><link rel="prefetch" href="/assets/js/144.de2101b2.js"><link rel="prefetch" href="/assets/js/145.a4833bb0.js"><link rel="prefetch" href="/assets/js/146.d5917080.js"><link rel="prefetch" href="/assets/js/147.beaf80ee.js"><link rel="prefetch" href="/assets/js/148.46108915.js"><link rel="prefetch" href="/assets/js/149.12260551.js"><link rel="prefetch" href="/assets/js/15.2bd2de66.js"><link rel="prefetch" href="/assets/js/150.8b80f5b7.js"><link rel="prefetch" href="/assets/js/16.cc12381b.js"><link rel="prefetch" href="/assets/js/17.6d6a4d9d.js"><link rel="prefetch" href="/assets/js/18.012ea362.js"><link rel="prefetch" href="/assets/js/19.77131f2f.js"><link rel="prefetch" href="/assets/js/20.523f7924.js"><link rel="prefetch" href="/assets/js/21.ecf840af.js"><link rel="prefetch" href="/assets/js/22.f5f040b3.js"><link rel="prefetch" href="/assets/js/23.0b5490e3.js"><link rel="prefetch" href="/assets/js/24.8e0c832d.js"><link rel="prefetch" href="/assets/js/25.b75958d9.js"><link rel="prefetch" href="/assets/js/26.f8f8cc8b.js"><link rel="prefetch" href="/assets/js/27.a1e700d4.js"><link rel="prefetch" href="/assets/js/28.5e70f8e2.js"><link rel="prefetch" href="/assets/js/29.7ba5fcb2.js"><link rel="prefetch" href="/assets/js/3.211cbe2f.js"><link rel="prefetch" href="/assets/js/30.923819bf.js"><link rel="prefetch" href="/assets/js/31.99064651.js"><link rel="prefetch" href="/assets/js/32.f90cbfc6.js"><link rel="prefetch" href="/assets/js/33.17297ea9.js"><link rel="prefetch" href="/assets/js/34.922b8299.js"><link rel="prefetch" href="/assets/js/35.f2b8e2c0.js"><link rel="prefetch" href="/assets/js/36.7d61c5fa.js"><link rel="prefetch" href="/assets/js/37.506e2e5f.js"><link rel="prefetch" href="/assets/js/38.f2c472c0.js"><link rel="prefetch" href="/assets/js/39.9bff5b1c.js"><link rel="prefetch" href="/assets/js/4.5c7d6078.js"><link rel="prefetch" href="/assets/js/40.4a6910db.js"><link rel="prefetch" href="/assets/js/41.5004dd03.js"><link rel="prefetch" href="/assets/js/42.6b1b8692.js"><link rel="prefetch" href="/assets/js/43.fd8e880c.js"><link rel="prefetch" href="/assets/js/44.898d46e5.js"><link rel="prefetch" href="/assets/js/45.d2804d1a.js"><link rel="prefetch" href="/assets/js/46.7a42468d.js"><link rel="prefetch" href="/assets/js/47.03cbcec8.js"><link rel="prefetch" href="/assets/js/48.cb6db6eb.js"><link rel="prefetch" href="/assets/js/49.0e17db69.js"><link rel="prefetch" href="/assets/js/5.dc190980.js"><link rel="prefetch" href="/assets/js/50.45de3d60.js"><link rel="prefetch" href="/assets/js/51.f88a036d.js"><link rel="prefetch" href="/assets/js/52.27a0ae54.js"><link rel="prefetch" href="/assets/js/53.6ca9f10b.js"><link rel="prefetch" href="/assets/js/54.fedf26f5.js"><link rel="prefetch" href="/assets/js/55.3a996261.js"><link rel="prefetch" href="/assets/js/56.15b30b91.js"><link rel="prefetch" href="/assets/js/57.bc78c608.js"><link rel="prefetch" href="/assets/js/58.c935a02d.js"><link rel="prefetch" href="/assets/js/59.6de934c0.js"><link rel="prefetch" href="/assets/js/6.025e3a82.js"><link rel="prefetch" href="/assets/js/60.10cd9550.js"><link rel="prefetch" href="/assets/js/61.5991e790.js"><link rel="prefetch" href="/assets/js/62.8b2bd8bd.js"><link rel="prefetch" href="/assets/js/63.99a02053.js"><link rel="prefetch" href="/assets/js/64.4a3bc3db.js"><link rel="prefetch" href="/assets/js/65.81088077.js"><link rel="prefetch" href="/assets/js/66.464e3ba6.js"><link rel="prefetch" href="/assets/js/67.8773d6d9.js"><link rel="prefetch" href="/assets/js/68.da41fc53.js"><link rel="prefetch" href="/assets/js/69.3c55807c.js"><link rel="prefetch" href="/assets/js/7.1a3ce0c4.js"><link rel="prefetch" href="/assets/js/70.940a2b6d.js"><link rel="prefetch" href="/assets/js/71.1ecaa932.js"><link rel="prefetch" href="/assets/js/72.efd6150e.js"><link rel="prefetch" href="/assets/js/73.a95a67cc.js"><link rel="prefetch" href="/assets/js/74.78b95e71.js"><link rel="prefetch" href="/assets/js/75.b124ae47.js"><link rel="prefetch" href="/assets/js/76.1483892b.js"><link rel="prefetch" href="/assets/js/77.112a77fd.js"><link rel="prefetch" href="/assets/js/78.35953a72.js"><link rel="prefetch" href="/assets/js/79.66ab0fd7.js"><link rel="prefetch" href="/assets/js/8.7954d5f5.js"><link rel="prefetch" href="/assets/js/80.452fb770.js"><link rel="prefetch" href="/assets/js/81.bfc3a9df.js"><link rel="prefetch" href="/assets/js/82.39b65876.js"><link rel="prefetch" href="/assets/js/83.79b3dfc6.js"><link rel="prefetch" href="/assets/js/84.4ac4d629.js"><link rel="prefetch" href="/assets/js/85.527df9b8.js"><link rel="prefetch" href="/assets/js/86.ad0ad7ff.js"><link rel="prefetch" href="/assets/js/87.f92c5124.js"><link rel="prefetch" href="/assets/js/88.35ca2f60.js"><link rel="prefetch" href="/assets/js/89.cbce2421.js"><link rel="prefetch" href="/assets/js/9.2e49f30e.js"><link rel="prefetch" href="/assets/js/90.d8d753e8.js"><link rel="prefetch" href="/assets/js/91.dc0afe13.js"><link rel="prefetch" href="/assets/js/92.1b1095bd.js"><link rel="prefetch" href="/assets/js/93.afc07e8f.js"><link rel="prefetch" href="/assets/js/94.036aff32.js"><link rel="prefetch" href="/assets/js/95.2d8736f9.js"><link rel="prefetch" href="/assets/js/96.4b2b5eb5.js"><link rel="prefetch" href="/assets/js/97.be2d0369.js"><link rel="prefetch" href="/assets/js/98.62c998bc.js"><link rel="prefetch" href="/assets/js/99.d8f578c1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c0b81199.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">陈东的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CS本科" class="dropdown-title"><span class="title">CS本科</span> <span class="arrow down"></span></button> <button type="button" aria-label="CS本科" class="mobile-dropdown-title"><span class="title">CS本科</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          必修基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/programming-language/" class="nav-link">
+  编程语言
+</a></li><li class="dropdown-subitem"><a href="/cs/dsa/" class="nav-link">
+  数据结构&amp;算法
+</a></li><li class="dropdown-subitem"><a href="/cs/linux/" class="nav-link">
+  使用Linux
+</a></li><li class="dropdown-subitem"><a href="/cs/compile/" class="nav-link">
+  编译原理
+</a></li><li class="dropdown-subitem"><a href="/cs/computer-system/" class="nav-link">
+  计算机系统结构
+</a></li></ul></li><li class="dropdown-item"><h4>
+          软件开发方向
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/programming-paradigms/" class="nav-link">
+  编程范式
+</a></li><li class="dropdown-subitem"><a href="/cs/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-subitem"><a href="/cs/dbs/" class="nav-link">
+  数据库系统
+</a></li><li class="dropdown-subitem"><a href="/cs/os/" class="nav-link">
+  操作系统
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据科学方向
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/python-data-science/" class="nav-link">
+  Python数据科学实战
+</a></li><li class="dropdown-subitem"><a href="/cs/machine-learning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-subitem"><a href="/cs/nlp/" class="nav-link">
+  NLP
+</a></li></ul></li><li class="dropdown-item"><h4>
+          找工作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/leetcode/" class="nav-link">
+  LeetCode
+</a></li><li class="dropdown-subitem"><a href="/cs/frontend-developer/" class="nav-link">
+  Web前端开发
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/base/" class="nav-link">
+  基本功
+</a></li><li class="dropdown-item"><h4>
+          框架 &amp; 工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  三大框架
+</a></li><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/admin-in-action/" class="nav-link">
+  中后台常见需求
+</a></li><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="程序员" class="dropdown-title"><span class="title">程序员</span> <span class="arrow down"></span></button> <button type="button" aria-label="程序员" class="mobile-dropdown-title"><span class="title">程序员</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/build-tools/" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          编程语言
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/programmer/rust/" class="nav-link">
+  Rust
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数学" class="dropdown-title"><span class="title">数学</span> <span class="arrow down"></span></button> <button type="button" aria-label="数学" class="mobile-dropdown-title"><span class="title">数学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/math/calculus/" class="nav-link">
+  微积分
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CS本科" class="dropdown-title"><span class="title">CS本科</span> <span class="arrow down"></span></button> <button type="button" aria-label="CS本科" class="mobile-dropdown-title"><span class="title">CS本科</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          必修基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/programming-language/" class="nav-link">
+  编程语言
+</a></li><li class="dropdown-subitem"><a href="/cs/dsa/" class="nav-link">
+  数据结构&amp;算法
+</a></li><li class="dropdown-subitem"><a href="/cs/linux/" class="nav-link">
+  使用Linux
+</a></li><li class="dropdown-subitem"><a href="/cs/compile/" class="nav-link">
+  编译原理
+</a></li><li class="dropdown-subitem"><a href="/cs/computer-system/" class="nav-link">
+  计算机系统结构
+</a></li></ul></li><li class="dropdown-item"><h4>
+          软件开发方向
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/programming-paradigms/" class="nav-link">
+  编程范式
+</a></li><li class="dropdown-subitem"><a href="/cs/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/cs/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-subitem"><a href="/cs/dbs/" class="nav-link">
+  数据库系统
+</a></li><li class="dropdown-subitem"><a href="/cs/os/" class="nav-link">
+  操作系统
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据科学方向
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/python-data-science/" class="nav-link">
+  Python数据科学实战
+</a></li><li class="dropdown-subitem"><a href="/cs/machine-learning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-subitem"><a href="/cs/nlp/" class="nav-link">
+  NLP
+</a></li></ul></li><li class="dropdown-item"><h4>
+          找工作
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/cs/leetcode/" class="nav-link">
+  LeetCode
+</a></li><li class="dropdown-subitem"><a href="/cs/frontend-developer/" class="nav-link">
+  Web前端开发
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/base/" class="nav-link">
+  基本功
+</a></li><li class="dropdown-item"><h4>
+          框架 &amp; 工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/framework/" class="nav-link">
+  三大框架
+</a></li><li class="dropdown-subitem"><a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li></ul></li><li class="dropdown-item"><h4>
+          跨平台
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/mini-program/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/frontend/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-subitem"><a href="/frontend/electron/" class="nav-link">
+  Electron
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/admin-in-action/" class="nav-link">
+  中后台常见需求
+</a></li><li class="dropdown-subitem"><a href="/frontend/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-subitem"><a href="/frontend/visualization/" class="nav-link">
+  可视化
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="程序员" class="dropdown-title"><span class="title">程序员</span> <span class="arrow down"></span></button> <button type="button" aria-label="程序员" class="mobile-dropdown-title"><span class="title">程序员</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/backend/database/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/backend/build-tools/" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><h4>
+          编程语言
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/programmer/rust/" class="nav-link">
+  Rust
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/cython/" class="nav-link">
+  Cython
+</a></li><li class="dropdown-subitem"><a href="/backend/protobuf/" class="nav-link">
+  Protobuf
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数学" class="dropdown-title"><span class="title">数学</span> <span class="arrow down"></span></button> <button type="button" aria-label="数学" class="mobile-dropdown-title"><span class="title">数学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/math/calculus/" class="nav-link">
+  微积分
+</a></li></ul></div></div> <a href="https://github.com/chend0316/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Node C++ Addons</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/node-addons.html#nan-native-abstractions-for-node-js" class="sidebar-link">NAN (Native abstractions for Node.js)</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/frontend/node-addons.html#n-api-node-api" class="sidebar-link">N-API (Node-API)</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="node-c-addons"><a href="#node-c-addons" class="header-anchor">#</a> Node C++ Addons</h1> <p>WIP: 限于笔者水平，所以本文内容可能有一些错误。</p> <p>我们可以基于 V8 API 和 Node.js API 提供的头文件来编写 C++ 代码。不同版本的 Node.js 使用的 V8 引擎版本也是不同的。主要有两个坑点：</p> <ul><li>V8 和 Node.js 在不同版本提供的函数有所不同，所以要为每一个版本的 Node.js 单独编译一份，有点坑。</li> <li>更坑的是 V8 API 变动非常频繁，很多变动都不向下兼容，所以有时不仅需要重新编译，而是需要重写代码！</li></ul> <p>NAN 提供了一些宏可以判断 V8 版本展开不同的宏，这屏蔽了一部分 V8 API 的变动，缓解了重写代码的问题。但还是需要为每个 V8 版本单独编译。</p> <p>N-API 封装了一层全新的 API，暴露出一些稳定的 API，保证接口向下兼容。而且只需要一次编译就可以用于不同版本的 Node.js。</p> <p>总之 NAN 本质上只是一些宏展开，没有提供新接口，在编译阶段屏蔽 V8 API 变动。N-API 则提供了一套全新接口，在运行阶段屏蔽 V8 API 变动。</p> <h2 id="nan-native-abstractions-for-node-js"><a href="#nan-native-abstractions-for-node-js" class="header-anchor">#</a> NAN (Native abstractions for Node.js)</h2> <p><code>npm install nan</code>，安装完成后进入 node_modules 目录找一下它提供的头文件，可以看到有很多宏。想要上手写代码的话，还是需要去学习 V8 的那套接口。</p> <p>因为没有提供新 API，不需要大家学额外的知识。所以<a href="https://nodejs.org/api/addons.html#addons_native_abstractions_for_node_js" target="_blank" rel="noopener noreferrer">Node.js 官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 只用了一小段话来介绍这个技术。然后给了一个
+<a href="https://github.com/nodejs/nan/tree/HEAD/examples/" target="_blank" rel="noopener noreferrer">demo<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <h2 id="n-api-node-api"><a href="#n-api-node-api" class="header-anchor">#</a> N-API (Node-API)</h2> <p>虽然不用学 V8 了，但要学很多 <a href="https://nodejs.org/api/n-api.html" target="_blank" rel="noopener noreferrer">N-API 的知识<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chend0316/blog/edit/master/docs/frontend/node-addons.md" target="_blank" rel="noopener noreferrer">编辑此页面</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">最后编辑:</span> <span class="time">10/17/2021, 9:14:48 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.45e8adb9.js" defer></script><script src="/assets/js/2.db376c04.js" defer></script><script src="/assets/js/110.529dbbc2.js" defer></script>
+  </body>
+</html>
